@@ -1,0 +1,33 @@
+.discharge_form_back{
+
+	background-image: -webkit-linear-gradient(0deg, #26d1a6 0%, #46c1f1 100%);
+	height: 100vh;
+}
+.section-padding{
+  padding-top: 400px 0px;
+  padding-left: 300px;
+  
+
+}
+
+.form_back{
+
+	background-image: -webkit-linear-gradient(0deg, #26d1a6 0%, #46c1f1 100%);
+
+}
+
+.text{
+	text-align: center;
+	margin-right: 100px;
+	text-shadow: transparent;
+	text-decoration-style: bold;
+	color: white;
+
+ font-family: "Times New Roman", Times, serif;
+}
+
+.btn{
+	background-image: -webkit-linear-gradient(0deg, #26d1a6 0%, #46c1f1 100%);
+	border-color: lavender;
+	
+}

@@ -1,0 +1,122 @@
+
+    
+    .navbar{
+    
+          background-image: -webkit-linear-gradient(0deg, #26d1a6 0%, #46c1f1 100%);
+          min-height: 80px;          
+    }
+
+    .section-padding{
+        margin-top: 200px;
+
+    }
+
+    .navbar-brand{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2em;
+        font-weight: bold;
+        
+        }
+        
+
+
+    .margin{
+        margin-left: 365px;
+    }
+    .topnav{
+        float: right;
+    }
+    li a{
+
+        color: black;
+        
+        }
+        .banner{
+
+       height: 100vh;
+       
+        }
+
+
+        .btn{
+            border-radius:30px;
+            border-color: green;
+        }
+
+        .intro{
+
+          height: 100vh;
+            
+            }
+
+            .navbar #Menu .custom-nav .nav-item a {
+
+                color:white;
+                
+                }
+
+                .navbar #Menu .custom-nav .nav-item a:hover {
+
+                    color:green;
+                    
+                    }
+
+
+                    .btn{
+                        background-image: -webkit-linear-gradient(0deg, #26d1a6 0%, #46c1f1 100%);
+                    }
+
+div.center{
+    text-align: center;
+    color: rgb(42, 255, 219);
+
+
+
+}
+
+
+.image_circle{
+    border-radius: 5%;
+}
+
+.center{
+    text-align: center;
+
+
+}
+
+
+
+
+.menu{
+    text-align: center;
+    color: rgb(42, 255, 219);
+
+}
+
+.btn-background{
+    background-image: -webkit-linear-gradient(0deg, #26d1a6 0%, #46c1f1 100%);
+}
+.back{
+    background-color: ivory;
+}
+
+.navbar-toggler{
+
+    color: white;
+    border-color: white;
+    border: 1px solid gold;
+    float: right;
+
+}
+
+    .font{
+        font-size: 35px;
+    }
+.solid {
+border-style: solid;
+border-radius: 5%;
+border-color: darkcyan;
+border-width: 5px;
+width: 400px;
+}

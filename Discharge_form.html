@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+		<head>
+
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+		crossorigin="anonymous">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+		crossorigin="anonymous">
+
+		<!-- Google Font -->
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="form_style.css">
+
+        </head>
+
+
+<body>
+
+
+
+<div class="container col-lg-12 section-padding discharge_form_back" >
+	<h1 class="text">Patient Discharge Form</h1>
+<form method="reg_form" >
+
+
+
+    <!-- ////////////////////// -->
+
+
+
+    <div class=" rom form-group col-md-3 " style="padding-top: 50px">
+      <label for="inputEmail4" >Patient ID</label>
+      <input type="text" class="form-control" id="inputEmail4" name="u_name">
+    </div>
+    <!-- ////////////////////// -->
+
+
+<!-- ////////////////////////////////////////////////////// -->
+
+ <div class=" rom form-group col-md-3">
+      <label for="inputEmail4">Status</label>
+      <input type="text" class="form-control" id="inputEmail4" name="cnic">
+    </div>
+   
+
+    <div class=" rom form-group col-md-3">
+      <label for="inputEmail4">Hospital ID</label>
+      <input type="text" class="form-control" id="inputEmail4" name="cnic">
+    </div>
+
+<!-- /////////////////////////////////////////////////////// -->
+ 
+
+
+  <div class= " rom form-group col-md-3">
+    <label for="inputAddress">Discharge Date</label>
+    <input type="text" class="form-control" id="inputAddress" name="class">
+  </div>
+
+
+ 
+
+
+</form>  
+
+
+<button type="submit" onclick="myFunction()" class="btn btn-success ml-3 mb-5" name="submit" value="submit">Submit</button> 
+  
+
+
+
+<script>
+
+function myFunction() {
+
+  
+   document.getElementById("demo").innerHTML = "Saved Successfully";
+
+}
+
+</script>
+
+
+
+<div class="row " style="margin-top: 10px;">
+
+  <img   class="text-black image_circle " src="images/tick.png " alt="..." height="40" width="50">
+<div  id="demo" class="btn font mb-5  ml-3">Press Submit to save record</div>        
+    
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+	
+		<!-- JQuery popper Bootstrap -->
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+ <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/stellar.js"></script>
+        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="vendors/isotope/isotope.pkgd.min.js"></script>
+        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+        <script src="vendors/counter-up/jquery.counterup.min.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="js/theme.js"></script>
+
+
+</body>
+</html>
+
+
+
+<?php
+
+if(isset($_POST['submit'])) 
+{
+
+$u_name=    $_POST['u_name'];
+$cnic=      $_POST['cnic'];
+$class=     $_POST['class'];
+$semester=  $_POST['semester'];
+$Rollno=    $_POST['Rollno'];
+$Address=   $_POST['Address'];
+
+
+if (!empty($u_name) || ($cnic) || ($class) || ($semester) || ($Rollno) || ($Address)) 
+{
+   
+$user = 'root';
+$pass = "";
+$database = "registration form";
+$host = 'localhost';
+$con = mysqli_connect($host, $user, $pass, $database);
+$query = "INSERT into db (u_name,cnic,class,semester,Rollno,Address) VALUES ('$u_name' , '$cnic', '$class', '$semester' , '$Rollno' , '$Address')";
+
+if(mysqli_query($con, $query))
+{
+ echo " inserted";
+}
+else 
+{
+echo "fail";
+}
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
